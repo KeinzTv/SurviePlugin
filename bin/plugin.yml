@@ -14,4 +14,4 @@ commands:
   shop:
     description: commande qui tp au shop
   tpa:
-    description: commande qui tp au shop
+    description: commande qui tp à la personne souhaité

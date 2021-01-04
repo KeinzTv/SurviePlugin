@@ -43,6 +43,10 @@ public final class SurviePlugin extends JavaPlugin {
 		getCommand("report").setExecutor(new Report());
 		getCommand("a").setExecutor(new Admin());
 		getCommand("tpa").setExecutor(new Teleportation());
+		getCommand("tpaccept").setExecutor(new Teleportation());
+		getCommand("tpyes").setExecutor(new Teleportation());
+		getCommand("tpdeny").setExecutor(new Teleportation());
+		getCommand("tpno").setExecutor(new Teleportation());
 		super.onEnable();
 	}
 	

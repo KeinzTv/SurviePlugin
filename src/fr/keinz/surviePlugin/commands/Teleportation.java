@@ -11,29 +11,35 @@ public class Teleportation implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		Player player = (Player) sender;
-		
-		if(sender instanceof Player) {
-            if(args.length != 1){
-                player.sendMessage("§cVeuillez saisir le pseudo d'un joueur !");
-                return false;
-            }
-			
-			if (player.isFlying()) {
-				player.setFlying(false);
-			}
-			
-			String targetName = args[0];
-			Player target = Bukkit.getPlayer(targetName);
-			
-			Location tl = target.getLocation();
-			player.teleport(tl);
-			player.sendMessage("§f[SERVEUR] : §aVous venez d'être téléporté au §2shop.");
-			return false;	
-		} else {
-			player.sendMessage("§f[SERVEUR] : §cSeul un joueur peut être téléporté au shop.");
+
+		if(sender instanceof  Player){
+			final Player player = (Player)sender;
+			if(label.equals("tpa")) return tpa(player, args);
+		}
+		return false;
+	}
+
+	private boolean tpa(Player player, String[] args){
+		if(args.length != 1){
+			player.sendMessage("Â§cVeuillez saisir le pseudo d'un joueur !");
 			return false;
 		}
+		if (player.isFlying()) {
+			player.setFlying(false);
+		}
+
+		final Player target = Bukkit.getPlayer(args[0]);
+		if(target != null){
+			target.sendMessage("Â§2" + player.getDisplayName() + " Â§aveut se tÃ©lÃ©porter Ã  votre position.\n" +
+					"Pour accepter la demande : Â§2/tpaccept Â§aou Â§2/tpyes.\n" +
+					"Â§aPour refuser la demande : Â§2/tpdeny Â§aou Â§2/tpno.");
+			player.teleport(target.getLocation());
+			player.sendMessage("Â§f[SERVEUR] : Â§aVous venez d'Ãªtre tÃ©lÃ©portÃ© Ã  Â§a" + target.getDisplayName() + ".");
+		} else {
+			player.sendMessage("Â§cCe joueur n'existe pas ou n'est pas connectÃ© !");
+		}
+
+		return false;
 	}
 	
 }
