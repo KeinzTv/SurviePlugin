@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.listeners;
+package fr.keinz.survieplugin.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -17,29 +17,29 @@ public class InventoryClick implements Listener {
         switch(e.getCurrentItem().getType()){
  
             case ELYTRA:
-                if(e.getCurrentItem().getItemMeta().getDisplayName().equals("§bFly")){
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals("ï¿½bFly")){
                     e.setCancelled(true);
                     player.closeInventory();
                     sendToStaff(e.getCurrentItem().getItemMeta().getDisplayName());
-                    player.sendMessage("§aVous avez bien signalé ce joueur !");
+                    player.sendMessage("ï¿½aVous avez bien signalï¿½ ce joueur !");
                 }
                 break;
  
             case ACACIA_SIGN:
-                if(e.getCurrentItem().getItemMeta().getDisplayName().equals("§cInsulte")){
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals("ï¿½cInsulte")){
                     e.setCancelled(true);
                     player.closeInventory();
                     sendToStaff(e.getCurrentItem().getItemMeta().getDisplayName());
-                    player.sendMessage("§aVous avez bien signalé ce joueur !");
+                    player.sendMessage("ï¿½aVous avez bien signalï¿½ ce joueur !");
                 }
                 break;
                 
             case NETHERITE_INGOT:
-            	if(e.getCurrentItem().getItemMeta().getDisplayName().equals("§aDuplication")){
+            	if(e.getCurrentItem().getItemMeta().getDisplayName().equals("ï¿½aDuplication")){
                     e.setCancelled(true);
                     player.closeInventory();
                     sendToStaff(e.getCurrentItem().getItemMeta().getDisplayName());
-                    player.sendMessage("§aVous avez bien signalé ce joueur !");
+                    player.sendMessage("ï¿½aVous avez bien signalï¿½ ce joueur !");
                 }
                 break;
  
@@ -50,7 +50,7 @@ public class InventoryClick implements Listener {
     private void sendToStaff(String raison) {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 			if (!player.hasPermission("moderation.mod")) {
-				player.sendMessage("§f[SERVEUR] : §3Le joueur ... à été §bsignalé pour " + raison);
+				player.sendMessage("ï¿½f[SERVEUR] : ï¿½3Le joueur ... ï¿½ ï¿½tï¿½ ï¿½bsignalï¿½ pour " + raison);
 			}
 		}
 	}

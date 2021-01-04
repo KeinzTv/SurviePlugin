@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.commands;
+package fr.keinz.survieplugin.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -22,17 +22,17 @@ public class Shop implements CommandExecutor {
 			if (player.getWorld().getName().equalsIgnoreCase("world")) {
 				Location spawnLocation = new Location(player.getWorld(), 4359.5, 66, 4441.5, -0.5f, -12.2f);
 				player.teleport(spawnLocation);
-				player.sendMessage("§f[SERVEUR] : §aVous venez d'être téléporté au §2shop.");
+				player.sendMessage("ï¿½f[SERVEUR] : ï¿½aVous venez d'ï¿½tre tï¿½lï¿½portï¿½ au ï¿½2shop.");
 				return false;
 			} else {
 				Location shopLocation = new Location(Bukkit.getWorld("world"), 4359.5, 66, 4441.5, -0.5f, -12.2f);
 				player.teleport(shopLocation);
-				player.sendMessage("§f[SERVEUR] : §aVous venez d'être téléporté au §2shop.");
+				player.sendMessage("ï¿½f[SERVEUR] : ï¿½aVous venez d'ï¿½tre tï¿½lï¿½portï¿½ au ï¿½2shop.");
 				return false;
 			}
 			
 		} else {
-			player.sendMessage("§f[SERVEUR] : §cSeul un joueur peut être téléporté au shop.");
+			player.sendMessage("ï¿½f[SERVEUR] : ï¿½cSeul un joueur peut ï¿½tre tï¿½lï¿½portï¿½ au shop.");
 			return false;
 		}
 	}

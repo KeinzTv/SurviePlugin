@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin;
+package fr.keinz.survieplugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,16 +9,16 @@ import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import fr.keinz.surviePlugin.commands.Admin;
-import fr.keinz.surviePlugin.commands.Report;
-import fr.keinz.surviePlugin.commands.Shop;
-import fr.keinz.surviePlugin.commands.Spawn;
-import fr.keinz.surviePlugin.commands.Teleportation;
-import fr.keinz.surviePlugin.listeners.InventoryClick;
-import fr.keinz.surviePlugin.listeners.ModItemsInteract;
-import fr.keinz.surviePlugin.listeners.PlayerChat;
-import fr.keinz.surviePlugin.listeners.PlayerQuit;
-import fr.keinz.surviePlugin.utils.PlayerManager;
+import fr.keinz.survieplugin.commands.Admin;
+import fr.keinz.survieplugin.commands.Report;
+import fr.keinz.survieplugin.commands.Shop;
+import fr.keinz.survieplugin.commands.Spawn;
+import fr.keinz.survieplugin.commands.Teleportation;
+import fr.keinz.survieplugin.listeners.InventoryClick;
+import fr.keinz.survieplugin.listeners.ModItemsInteract;
+import fr.keinz.survieplugin.listeners.PlayerChat;
+import fr.keinz.survieplugin.listeners.PlayerQuit;
+import fr.keinz.survieplugin.utils.PlayerManager;
 
 public final class SurviePlugin extends JavaPlugin {
 	private static SurviePlugin instance;

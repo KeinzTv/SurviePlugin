@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.commands;
+package fr.keinz.survieplugin.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
-import fr.keinz.surviePlugin.utils.ItemBuilder;
+import fr.keinz.survieplugin.utils.ItemBuilder;
 
 public class Report implements CommandExecutor {
 
@@ -23,24 +23,24 @@ public class Report implements CommandExecutor {
  
         if(label.equalsIgnoreCase("report")){
             if(args.length != 1){
-                player.sendMessage("§cVeuillez saisir le pseudo d'un joueur !");
+                player.sendMessage("ï¿½cVeuillez saisir le pseudo d'un joueur !");
                 return false;
             }
  
             String targetName = args[0];
  
             if(Bukkit.getPlayer(targetName) == null){
-                player.sendMessage("§cCe joueur n'est pas connecté ou n'existe pas !");
+                player.sendMessage("ï¿½cCe joueur n'est pas connectï¿½ ou n'existe pas !");
                 return false;
             }
  
             Player target = Bukkit.getPlayer(targetName);
  
-            Inventory inv = Bukkit.createInventory(null, 27, "§aReport: §2" + target.getName());
+            Inventory inv = Bukkit.createInventory(null, 27, "ï¿½aReport: ï¿½2" + target.getName());
  
-            inv.setItem(10, new ItemBuilder(Material.ELYTRA).setName("§bFly").toItemStack());
-            inv.setItem(13, new ItemBuilder(Material.ACACIA_SIGN).setName("§cInsulte").toItemStack());
-            inv.setItem(16, new ItemBuilder(Material.NETHERITE_INGOT).setName("§aDuplication").toItemStack());
+            inv.setItem(10, new ItemBuilder(Material.ELYTRA).setName("ï¿½bFly").toItemStack());
+            inv.setItem(13, new ItemBuilder(Material.ACACIA_SIGN).setName("ï¿½cInsulte").toItemStack());
+            inv.setItem(16, new ItemBuilder(Material.NETHERITE_INGOT).setName("ï¿½aDuplication").toItemStack());
  
             player.openInventory(inv);
         }

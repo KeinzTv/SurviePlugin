@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.listeners;
+package fr.keinz.survieplugin.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -18,7 +18,7 @@ public class PlayerChat implements Listener {
  
             Bukkit.getOnlinePlayers().stream()
                     .filter(players -> player.hasPermission("moderation.mod"))
-                    .forEach(players -> players.sendMessage("§7(§b§lSTAFF CHAT§7) §e" + e.getPlayer().getName() + e.getMessage().substring(1)));
+                    .forEach(players -> players.sendMessage("ï¿½7(ï¿½bï¿½lSTAFF CHATï¿½7) ï¿½e" + e.getPlayer().getName() + e.getMessage().substring(1)));
  
         }
     }

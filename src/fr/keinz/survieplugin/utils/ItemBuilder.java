@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.utils;
+package fr.keinz.survieplugin.utils;
 
 import org.bukkit.Color;
 import org.bukkit.DyeColor;

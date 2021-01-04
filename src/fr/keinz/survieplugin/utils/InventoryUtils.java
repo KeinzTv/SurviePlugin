@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.utils;
+package fr.keinz.survieplugin.utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

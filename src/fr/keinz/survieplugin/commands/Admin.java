@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.commands;
+package fr.keinz.survieplugin.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-import fr.keinz.surviePlugin.utils.PlayerManager;
+import fr.keinz.survieplugin.utils.PlayerManager;
 
 public class Admin implements CommandExecutor, Listener {
 
@@ -15,7 +15,7 @@ public class Admin implements CommandExecutor, Listener {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			if (!player.hasPermission("moderation.mod")) {
-				player.sendMessage("§f[SERVEUR] : §cVous n'avez pas la permission d'effectuer cette commande");
+				player.sendMessage("ï¿½f[SERVEUR] : ï¿½cVous n'avez pas la permission d'effectuer cette commande");
 				return false;
 			}
 			
@@ -36,7 +36,7 @@ public class Admin implements CommandExecutor, Listener {
 	        }
 			
 			if (args.length >= 1) {
-				player.sendMessage("§f[SERVEUR] : §c/admin or /a");
+				player.sendMessage("ï¿½f[SERVEUR] : ï¿½c/admin or /a");
 			}
 		}
 		return false;

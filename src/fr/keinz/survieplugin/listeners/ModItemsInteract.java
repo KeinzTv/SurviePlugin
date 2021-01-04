@@ -1,4 +1,4 @@
-package fr.keinz.surviePlugin.listeners;
+package fr.keinz.survieplugin.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
 
-import fr.keinz.surviePlugin.utils.PlayerManager;
+import fr.keinz.survieplugin.utils.PlayerManager;
 
 public class ModItemsInteract implements Listener {
  
@@ -86,20 +86,20 @@ public class ModItemsInteract implements Listener {
  
         switch(player.getInventory().getItemInHand().getType()){
             /**
-             * Téléportation aléatoire
+             * Tï¿½lï¿½portation alï¿½atoire
              */
             case COMPASS:
                 List<Player> list = new ArrayList<>(Bukkit.getOnlinePlayers());
                 list.remove(player);
  
                 if(list.size() == 0){
-                    player.sendMessage("§cIl n'y a aucun joueur sur lequel vous téléporter.");
+                    player.sendMessage("ï¿½cIl n'y a aucun joueur sur lequel vous tï¿½lï¿½porter.");
                     return;
                 }
  
                 Player target = list.get(new Random().nextInt(list.size()));
                 player.teleport(target.getLocation());
-                player.sendMessage("§aVous avez été téléporté à §e" + target.getName());
+                player.sendMessage("ï¿½aVous avez ï¿½tï¿½ tï¿½lï¿½portï¿½ ï¿½ ï¿½e" + target.getName());
                 break;
  
             /**
@@ -108,7 +108,7 @@ public class ModItemsInteract implements Listener {
             case GUNPOWDER:
                 PlayerManager mod = PlayerManager.getFromPlayer(player);
                 mod.setVanished(!mod.isVanished());
-                player.sendMessage(mod.isVanished() ? "§avous êtes à présent invisible !" : "§bVous êtes à présent visible !");
+                player.sendMessage(mod.isVanished() ? "ï¿½avous ï¿½tes ï¿½ prï¿½sent invisible !" : "ï¿½bVous ï¿½tes ï¿½ prï¿½sent visible !");
                 break;
  
             default: break;
