@@ -1,0 +1,17 @@
+name: SurviePlugin
+version: 1.0
+author: Keinz
+main: fr.keinz.surviePlugin.SurviePlugin
+commands:
+  spawn:
+    description: commande qui tp au spawn
+  admin:
+    description: commande pour se mettre en mode administration
+  a:
+    description: commande pour se mettre en mode administration
+  report:
+    description: commande pour report des joueurs
+  shop:
+    description: commande qui tp au shop
+  tpa:
+    description: commande qui tp au shop
