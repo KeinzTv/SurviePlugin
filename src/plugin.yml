@@ -21,3 +21,5 @@ commands:
     description: commande qui refuse une demande de téléportation
   tpdeny:
     description: commande qui refuse une demande de téléportation
+  tpno:
+    description: commande qui refuse une demande de téléportation

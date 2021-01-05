@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.keinz.survieplugin.commands.Admin;
@@ -20,9 +21,11 @@ import fr.keinz.survieplugin.listeners.PlayerChat;
 import fr.keinz.survieplugin.listeners.PlayerQuit;
 import fr.keinz.survieplugin.utils.PlayerManager;
 
+
 public final class SurviePlugin extends JavaPlugin {
 	private static SurviePlugin instance;
 	public HashMap<UUID, PlayerManager> players = new HashMap<>();
+	public HashMap<Player, ArrayList<Player>> teleportationRequestMap = new HashMap<>();
 	public ArrayList<UUID> moderateurs = new ArrayList<>();
 	
 	@Override

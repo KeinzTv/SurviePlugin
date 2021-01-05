@@ -1,7 +1,7 @@
 name: SurviePlugin
 version: 1.0
 author: Keinz
-main: fr.keinz.surviePlugin.SurviePlugin
+main: fr.keinz.survieplugin.SurviePlugin
 commands:
   spawn:
     description: commande qui tp au spawn
@@ -15,3 +15,11 @@ commands:
     description: commande qui tp au shop
   tpa:
     description: commande qui tp à la personne souhaité
+  tpaccept:
+    description: commande qui accepte une demande de téléportation
+  tpyes:
+    description: commande qui refuse une demande de téléportation
+  tpdeny:
+    description: commande qui refuse une demande de téléportation
+  tpno:
+    description: commande qui refuse une demande de téléportation
