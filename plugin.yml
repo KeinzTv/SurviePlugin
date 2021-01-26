@@ -1,0 +1,31 @@
+name: SurviePlugin
+version: 1.0
+author: Keinz
+main: fr.keinz.surviePlugin.SurviePlugin
+commands:
+  spawn:
+    description: commande qui tp au spawn
+  admin:
+    description: commande pour se mettre en mode administration
+  a:
+    description: commande pour se mettre en mode administration
+  kit:
+    description: commande qui give un kit
+  rank:
+    description: commande pour gérer les ranks
+  gm:
+    description: commande pour changer le gamemode
+  ping:
+    description: commande pour savoir le ping
+  feed:
+    description: commande pour etre nourri
+  tpa:
+    description: commande qui tp au joueur demandé
+  tpaccept:
+    description: commande pour accepter un tp
+  tpyes:
+    description: commande pour accepter un tp
+  tpdeny:
+    description: commande pour refuser un tp
+  tpno:
+    description: commande pour refuser un tp

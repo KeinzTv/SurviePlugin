@@ -1,11 +1,11 @@
-package fr.keinz.survieplugin.listeners;
+package fr.keinz.surviePlugin.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import fr.keinz.survieplugin.utils.PlayerManager;
+import fr.keinz.surviePlugin.utils.PlayerManager;
  
 public class PlayerQuit implements Listener {
  

@@ -1,4 +1,4 @@
-package fr.keinz.survieplugin.commands;
+package fr.keinz.surviePlugin.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -22,17 +22,17 @@ public class Spawn implements CommandExecutor {
 			if (player.getWorld().getName().equalsIgnoreCase("world")) {
 				Location spawnLocation = new Location(player.getWorld(), 3000.5, 65, 3000.5, 0.1f, -3.5f);
 				player.teleport(spawnLocation);
-				player.sendMessage("ï¿½f[SERVEUR] : ï¿½aVous venez d'ï¿½tre tï¿½lï¿½portï¿½ au ï¿½2spawn.");
+				player.sendMessage("§f[SERVEUR] : §aVous venez d'être téléporté au §2spawn.");
 				return false;
 			} else {
 				Location spawnLocation = new Location(Bukkit.getWorld("world"), 3000.5, 65, 3000.5, 0.1f, -3.5f);
 				player.teleport(spawnLocation);
-				player.sendMessage("ï¿½f[SERVEUR] : ï¿½aVous venez d'ï¿½tre tï¿½lï¿½portï¿½ au ï¿½2spawn.");
+				player.sendMessage("§f[SERVEUR] : §aVous venez d'être téléporté au §2spawn.");
 				return false;
 			}
 			
 		} else {
-			player.sendMessage("ï¿½f[SERVEUR] : ï¿½cSeul un joueur peut ï¿½tre tï¿½lï¿½portï¿½ au spawn.");
+			player.sendMessage("§f[SERVEUR] : §cSeul un joueur peut être téléporté au spawn.");
 		}
 		return false;
 	}

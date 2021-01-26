@@ -1,4 +1,4 @@
-package fr.keinz.survieplugin.utils;
+package fr.keinz.surviePlugin.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -7,7 +7,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import fr.keinz.survieplugin.SurviePlugin;
+import fr.keinz.surviePlugin.SurviePlugin;
  
 public class PlayerManager {
 	private Player player;
@@ -22,17 +22,17 @@ public class PlayerManager {
     public void init(){
     	SurviePlugin.getInstance().getPlayers().put(player.getUniqueId(), this);
     	SurviePlugin.getInstance().getModerateurs().add(player.getUniqueId());
-        player.sendMessage("ï¿½aVous ï¿½tes ï¿½ prï¿½sent en mode administrateur");
+        player.sendMessage("§f[SERVEUR] : §aVous êtes à présent en mode administrateur !");
         saveInventory();
         player.setGameMode(GameMode.CREATIVE);
  
-        ItemBuilder invSee = new ItemBuilder(Material.CHEST).setName("ï¿½eVoir l'inventaire").setLore("ï¿½7Clique droit sur un joueur", "ï¿½7pour voir son inventaire.");
-        ItemBuilder reports = new ItemBuilder(Material.BOOK).setName("ï¿½6Voir les signalements").setLore("ï¿½7Clique droit sur un joueur", "ï¿½7pour voir ses signalements.");
-        ItemBuilder kbTester = new ItemBuilder(Material.STICK).setName("ï¿½dTest de recul").setLore("ï¿½7Clique gauche sur un joueur", "ï¿½7pour tester son recul.").addUnsafeEnchantment(Enchantment.KNOCKBACK, 5);
-        ItemBuilder stopAdmin = new ItemBuilder(Material.BEDROCK).setName("ï¿½bClear l'inventaire du joueur").setLore("ï¿½7Clique droit sur un joueur", "ï¿½7pour clear son inventaire.");
-        ItemBuilder killer = new ItemBuilder(Material.BLAZE_ROD).setName("ï¿½cTueur de joueur").setLore("ï¿½7Clique droit sur un joueur", "ï¿½7pour le tuer.");
-        ItemBuilder tpRandom = new ItemBuilder(Material.COMPASS).setName("ï¿½aTï¿½lï¿½portation alï¿½atoire").setLore("ï¿½7Clique droit pour se tï¿½lï¿½porter", "ï¿½7alï¿½atoirement sur un joueur.");
-        ItemBuilder vanish = new ItemBuilder(Material.GUNPOWDER).setName("ï¿½2Vanish").setLore("ï¿½7Clique droit pour activer/dï¿½sactiver", "ï¿½7le vanish.");
+        ItemBuilder invSee = new ItemBuilder(Material.CHEST).setName("§eVoir l'inventaire").setLore("§7Clique droit sur un joueur", "§7pour voir son inventaire.");
+        ItemBuilder reports = new ItemBuilder(Material.BOOK).setName("§6Voir les signalements").setLore("§7Clique droit sur un joueur", "§7pour voir ses signalements.");
+        ItemBuilder kbTester = new ItemBuilder(Material.STICK).setName("§dTest de recul").setLore("§7Clique gauche sur un joueur", "§7pour tester son recul.").addUnsafeEnchantment(Enchantment.KNOCKBACK, 5);
+        ItemBuilder stopAdmin = new ItemBuilder(Material.BEDROCK).setName("§bClear l'inventaire du joueur").setLore("§7Clique droit sur un joueur", "§7pour clear son inventaire.");
+        ItemBuilder killer = new ItemBuilder(Material.BLAZE_ROD).setName("§cTueur de joueur").setLore("§7Clique droit sur un joueur", "§7pour le tuer.");
+        ItemBuilder tpRandom = new ItemBuilder(Material.COMPASS).setName("§aTéléportation aléatoire").setLore("§7Clique droit pour se téléporter", "§7aléatoirement sur un joueur.");
+        ItemBuilder vanish = new ItemBuilder(Material.GUNPOWDER).setName("§2Vanish").setLore("§7Clique droit pour activer/désactiver", "§7le vanish.");
  
         player.getInventory().setItem(0, invSee.toItemStack());
         player.getInventory().setItem(1, reports.toItemStack());
@@ -47,7 +47,7 @@ public class PlayerManager {
     	SurviePlugin.getInstance().getPlayers().remove(player.getUniqueId());
     	SurviePlugin.getInstance().getModerateurs().remove(player.getUniqueId());
         player.getInventory().clear();
-        player.sendMessage("ï¿½cVous n'ï¿½tes maintenant plus en mode administrateur");
+        player.sendMessage("§f[SERVEUR] : §cVous n'êtes maintenant plus en mode administrateur !");
         giveInventory();
         player.setGameMode(GameMode.SURVIVAL);
         setVanished(false);

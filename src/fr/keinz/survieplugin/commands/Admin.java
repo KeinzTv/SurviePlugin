@@ -1,21 +1,28 @@
-package fr.keinz.survieplugin.commands;
+package fr.keinz.surviePlugin.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-import fr.keinz.survieplugin.utils.PlayerManager;
+import fr.keinz.surviePlugin.rank.Rank;
+import fr.keinz.surviePlugin.utils.PlayerManager;
 
 public class Admin implements CommandExecutor, Listener {
+	private final Rank rank;
+	
+	public Admin(Rank rank) {
+		this.rank = rank;
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
-			if (!player.hasPermission("moderation.mod")) {
-				player.sendMessage("ï¿½f[SERVEUR] : ï¿½cVous n'avez pas la permission d'effectuer cette commande");
+			if (rank.hasPowerInf(player, 75)) {
+				player.sendMessage("§f[SERVEUR] : §cVous n'avez pas la permission d'effectuer cette commande");
 				return false;
 			}
 			
@@ -35,8 +42,20 @@ public class Admin implements CommandExecutor, Listener {
 	            }
 	        }
 			
-			if (args.length >= 1) {
-				player.sendMessage("ï¿½f[SERVEUR] : ï¿½c/admin or /a");
+			if (args.length == 1) {
+				Player target = Bukkit.getPlayer(args[0]);
+				player.sendMessage("§f[SERVEUR] : §c" + target.getName() + " §aest à présent en mode administrateur.");
+				
+				if(PlayerManager.isInModerationMod(target)){
+	                PlayerManager.getFromPlayer(target).destroy();
+	            } else {
+	                new PlayerManager(target).init();
+	            }
+			}
+			
+			if (args.length >= 2) {
+				player.sendMessage("§f[SERVEUR] : §c/admin or /a");
+				return false;
 			}
 		}
 		return false;

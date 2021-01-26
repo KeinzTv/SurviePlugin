@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="SurviePlugin:jar">
-    <output-path>$PROJECT_DIR$/classes/artifacts/SurviePlugin_jar</output-path>
-    <root id="archive" name="SurviePlugin.jar">
-      <element id="module-output" name="SurviePlugin" />
-    </root>
-  </artifact>
-</component>
